@@ -1,0 +1,10 @@
+used %s/^/"/ to add quote to beginning of every line
+
+and %s/$/"/ to add quote to the end of every line
+
+% means 'do every line'
+^ means beginning of line
+% means end of line
+/ is used to delineate regex
+
+
