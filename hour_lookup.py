@@ -14,7 +14,7 @@ def centering(both, mid, name):
     '''
     #apply the delta_range to get the range around the middle
     centered = [mid+x for x in both] + [mid]
-    entry = dict([[name,centered],])
+    entry = dict([[name,centered],]) #this is confusing because it has to be a tuple
     return entry
 
 def dict_grower(entry, categories):
