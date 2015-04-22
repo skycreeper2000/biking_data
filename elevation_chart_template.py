@@ -146,20 +146,20 @@ def getElevation(path="36.578581,-118.291994|36.23998,-116.83171",samples="2",se
     })
 
     url = ELEVATION_BASE_URL + '?' + urllib.urlencode(elvtn_args)
-    print elvtn_args
-    print url
-    print urllib.urlopen(url)
+    #print elvtn_args
+    #print url
+    #print urllib.urlopen(url)
 
     response = simplejson.load(urllib.urlopen(url))
-    print response
+    #print response
 
-    # # Create a dictionary for each results[] object
-    # elevationArray = []
-    #
-    # for resultset in response['results']:
-    #   elevationArray.append(resultset['elevation'])
-    #
-    # print elevationArray
+    # Create a dictionary for each results[] object
+    elevationArray = []
+
+    for resultset in response['results']:
+      elevationArray.append(resultset['elevation'])
+
+    print elevationArray
     #
     # # Create the chart passing the array of elevation data
     # getChart(chartData=elevationArray)
@@ -187,8 +187,15 @@ if __name__ == '__main__':
     #
     # getElevation(pathStr)
 
+
     chunk = split_list_if_long(raw_lat_long)
-    points = collapse_to_unique_points(next(chunk))
-    pathStr, samples = convert_to_path(points)
-    getElevation(pathStr, samples)
+
+    while chunk:
+        try:
+            points = collapse_to_unique_points(next(chunk))
+            pathStr, samples = convert_to_path(points)
+            getElevation(pathStr, samples)
+        except StopIteration:
+            break
+
 
