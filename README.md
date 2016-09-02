@@ -1,8 +1,13 @@
-(under construction) 
 
-Raw data exported as XML (other formats were missing data), parsed using lxml objectify and pandas. 
+Raw Garmin device data exported as XML, parsed using lxml objectify and pandas. 
 
-To view IPython notebook (.ipynb) files, copy the complete url and paste into the box at 
+Series of 5 blog posts with discussion and data visualizations are here:
 
-http://nbviewer.ipython.org
+http://codrspace.com/szeitlin/bike-data-from-xml-to-plots/
+http://codrspace.com/szeitlin/biking-data-from-xml-to-plots-part-2/
+http://codrspace.com/szeitlin/biking-data-from-xml-to-plots-part-3/
+http://codrspace.com/szeitlin/biking-data-from-xml-to-plots-part-4/
+http://codrspace.com/szeitlin/biking-data-from-xml-to-plots-revised/
+
+
  
